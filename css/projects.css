@@ -1,0 +1,1201 @@
+/* =========================================================
+   AA BUILDERS & INTERIORS
+   PROJECTS PAGE
+   ========================================================= */
+
+
+/* ================= PAGE BANNER ================= */
+
+.projects-banner {
+  min-height: 390px;
+
+  background:
+    linear-gradient(
+      100deg,
+      rgba(7, 27, 44, 0.96),
+      rgba(11, 42, 68, 0.82)
+    ),
+    url("../images/projects-banner.jpg");
+
+  background-size: cover;
+  background-position: center;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+
+  padding: 80px 28px;
+}
+
+
+.projects-banner__content {
+  max-width: 760px;
+}
+
+
+.projects-eyebrow {
+  color: #D6A945;
+
+  font-size: 0.82rem;
+
+  font-weight: 600;
+
+  letter-spacing: 2px;
+
+  text-transform: uppercase;
+
+  margin-bottom: 15px;
+}
+
+
+.projects-banner h1 {
+  color: #FFFFFF;
+
+  font-family: "Playfair Display", Georgia, serif;
+
+  font-size: clamp(2.5rem, 5vw, 4rem);
+
+  margin: 0 0 18px;
+}
+
+
+.projects-banner h1 em {
+  color: #D6A945;
+
+  font-style: italic;
+}
+
+
+.projects-banner__content > p:not(.projects-eyebrow) {
+  color: #CBD8E3;
+
+  font-size: 1rem;
+
+  max-width: 600px;
+
+  margin: 0 auto 25px;
+}
+
+
+.breadcrumb {
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  gap: 12px;
+
+  color: #B9C9D6;
+
+  font-size: 0.88rem;
+}
+
+
+.breadcrumb a {
+  color: #FFFFFF;
+
+  transition: color 0.2s ease;
+}
+
+
+.breadcrumb a:hover {
+  color: #D6A945;
+}
+
+
+/* =========================================================
+   AA BUILDERS & INTERIORS
+   PROJECTS PAGE
+   SCREENSHOT STYLE PROJECT CARDS
+   ========================================================= */
+
+
+/* ================= PROJECT SECTION ================= */
+
+.projects-page {
+  padding: 90px 0;
+  background: #F8F6F1;
+}
+
+
+/* ================= PROJECT HEADING ================= */
+
+.projects-heading {
+  max-width: 760px;
+  margin: 0 auto 55px;
+  text-align: center;
+}
+
+.projects-heading .eyebrow {
+  justify-content: center;
+}
+
+.projects-heading h2 {
+  font-family: "Playfair Display", Georgia, serif;
+  color: #0B2A44;
+  font-size: clamp(2rem, 4vw, 2.8rem);
+  margin: 0 0 14px;
+}
+
+.projects-heading > p:last-child {
+  color: #667380;
+  font-size: 1rem;
+  line-height: 1.7;
+  margin: 0 auto;
+}
+
+
+/* ================= PROJECT GRID ================= */
+
+.projects-grid {
+  display: grid;
+
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+
+  gap: 32px;
+
+  align-items: stretch;
+}
+
+
+/* ================= PROJECT CARD ================= */
+
+.project-box {
+  background: #FFFFFF;
+
+  border: none;
+
+  border-radius: 18px;
+
+  overflow: hidden;
+
+  box-shadow:
+    0 8px 25px rgba(11, 42, 68, 0.08);
+
+  display: flex;
+
+  flex-direction: column;
+
+  min-width: 0;
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+
+.project-box:hover {
+  transform: translateY(-7px);
+
+  box-shadow:
+    0 18px 40px rgba(11, 42, 68, 0.14);
+}
+
+
+/* =========================================================
+   PROJECT IMAGE
+   ========================================================= */
+
+.project-image {
+  position: relative;
+
+  width: 100%;
+
+  height: 320px;
+
+  overflow: hidden;
+
+  background: #0B2A44;
+}
+
+
+.project-image img {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+
+  object-position: center;
+
+  transition: transform 0.5s ease;
+}
+
+
+.project-box:hover .project-image img {
+  transform: scale(1.05);
+}
+
+
+/* =========================================================
+   ONGOING BADGE
+   ========================================================= */
+
+.project-status {
+  position: absolute;
+
+  top: 20px;
+  left: 20px;
+
+  z-index: 5;
+
+  padding: 9px 19px;
+
+  background: #D6A945;
+
+  color: #071B2C;
+
+  border-radius: 25px;
+
+  font-size: 0.73rem;
+
+  font-weight: 700;
+
+  letter-spacing: 0.6px;
+
+  text-transform: uppercase;
+
+  box-shadow:
+    0 5px 14px rgba(0, 0, 0, 0.12);
+}
+
+
+/* =========================================================
+   PROJECT NUMBER
+   ========================================================= */
+
+.project-number {
+  position: absolute;
+
+  top: 20px;
+  right: 20px;
+
+  z-index: 5;
+
+  width: 42px;
+  height: 42px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: #0B2A44;
+
+  color: #D6A945;
+
+  font-family: "Playfair Display", Georgia, serif;
+
+  font-size: 0.9rem;
+
+  font-weight: 700;
+}
+
+
+/* =========================================================
+   PROJECT CONTENT
+   ========================================================= */
+
+.project-content {
+  padding: 25px 30px 30px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  flex: 1;
+}
+
+
+/* =========================================================
+   PROJECT LABEL
+   ========================================================= */
+
+.project-label {
+  color: #0EA5E9 !important;
+
+  font-size: 0.74rem;
+
+  font-weight: 700;
+
+  letter-spacing: 1.5px;
+
+  text-transform: uppercase;
+
+  margin: 0 0 8px !important;
+}
+
+
+/* =========================================================
+   PROJECT TITLE
+   ========================================================= */
+
+.project-content h3 {
+  color: #0B2A44;
+
+  font-family: "Playfair Display", Georgia, serif;
+
+  font-size: 1.55rem;
+
+  line-height: 1.25;
+
+  margin: 0 0 13px;
+}
+
+
+/* =========================================================
+   LOCATION
+   ========================================================= */
+
+.project-location {
+  color: #7B1E2B;
+
+  font-size: 0.92rem;
+
+  font-weight: 600;
+
+  margin: 0 0 18px;
+}
+
+.project-location span {
+  margin-right: 7px;
+
+  color: #D6A945;
+
+  font-size: 1rem;
+}
+
+
+/* =========================================================
+   DESCRIPTION
+   ========================================================= */
+
+.project-description {
+  color: #667380;
+
+  font-size: 0.9rem;
+
+  line-height: 1.65;
+
+  margin: 0 0 25px;
+
+  min-height: 75px;
+}
+
+
+/* =========================================================
+   PHASE / SECONDARY LOCATION
+   ========================================================= */
+
+.project-phase {
+  color: #667380;
+
+  font-size: 0.88rem;
+
+  line-height: 1.6;
+
+  margin: -5px 0 18px;
+}
+
+.secondary-location {
+  margin-top: -2px;
+}
+
+
+/* =========================================================
+   PROGRESS AREA
+   ========================================================= */
+
+.project-progress-header {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 15px;
+
+  margin-top: auto;
+
+  margin-bottom: 9px;
+}
+
+
+.project-progress-title {
+  color: #3A1520;
+
+  font-size: 0.75rem;
+
+  font-weight: 700;
+
+  letter-spacing: 0.7px;
+
+  text-transform: uppercase;
+}
+
+
+.project-progress-value {
+  color: #D6A945;
+
+  font-size: 0.9rem;
+
+  font-weight: 700;
+}
+
+
+/* =========================================================
+   PROGRESS BAR
+   ========================================================= */
+
+.project-progress {
+  width: 100%;
+
+  height: 10px;
+
+  background: #E8E3D9;
+
+  border-radius: 20px;
+
+  overflow: hidden;
+
+  margin-bottom: 27px;
+}
+
+
+.project-progress span {
+  display: block;
+
+  height: 100%;
+
+  border-radius: 20px;
+
+  background:
+    linear-gradient(
+      90deg,
+      #D6A945 0%,
+      #B9872C 45%,
+      #6F1D2A 100%
+    );
+}
+
+
+/* ================= PROGRESS VALUES ================= */
+
+.progress-70 {
+  width: 70%;
+}
+
+.progress-65 {
+  width: 65%;
+}
+
+.progress-60 {
+  width: 60%;
+}
+
+.progress-55 {
+  width: 55%;
+}
+
+.progress-50 {
+  width: 50%;
+}
+
+
+/* =========================================================
+   ENQUIRE BUTTON
+   ========================================================= */
+
+.project-btn {
+  width: 100%;
+
+  padding: 15px 22px;
+
+  margin: 0;
+
+  border: none;
+
+  border-radius: 30px;
+
+  background: #D6A945;
+
+  color: #071B2C;
+
+  font-family: "Poppins", sans-serif;
+
+  font-size: 0.92rem;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  text-align: center;
+
+  transition:
+    background 0.25s ease,
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+
+.project-btn:hover {
+  background: #B9872C;
+
+  color: #FFFFFF;
+
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 8px 18px rgba(185, 135, 44, 0.25);
+}
+
+
+/* =========================================================
+   CTA
+   ========================================================= */
+
+.projects-cta {
+  background: #0B2A44;
+
+  padding: 75px 0;
+}
+
+
+.projects-cta-content {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 40px;
+
+  flex-wrap: wrap;
+}
+
+
+.projects-cta h2 {
+  color: #FFFFFF;
+
+  font-family: "Playfair Display", Georgia, serif;
+
+  font-size: clamp(1.8rem, 3vw, 2.5rem);
+
+  margin: 0 0 10px;
+}
+
+
+.projects-cta p:last-child {
+  color: #B9C9D6;
+
+  margin: 0;
+
+  max-width: 550px;
+
+  line-height: 1.7;
+}
+
+
+.eyebrow-light {
+  color: #D6A945 !important;
+}
+
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+.footer-simple {
+  padding: 55px 0 40px;
+
+  display: flex;
+
+  justify-content: space-between;
+
+  gap: 40px;
+
+  flex-wrap: wrap;
+}
+
+
+.footer-simple p {
+  color: #B9C9D6;
+
+  max-width: 350px;
+
+  margin-top: 18px;
+}
+
+
+.footer-links {
+  display: flex;
+
+  gap: 24px;
+
+  align-items: center;
+
+  flex-wrap: wrap;
+}
+
+
+.footer-links a {
+  color: #B9C9D6;
+
+  font-size: 0.9rem;
+
+  transition: color 0.2s ease;
+}
+
+
+.footer-links a:hover {
+  color: #D6A945;
+}
+
+
+.footer-bottom {
+  border-top: 1px solid rgba(255,255,255,0.08);
+
+  padding: 20px 0;
+}
+
+
+.footer-bottom p {
+  color: #7E93A3;
+
+  font-size: 0.8rem;
+
+  margin: 0;
+}
+
+
+/* =========================================================
+   MODAL
+   ========================================================= */
+
+.enquiry-modal {
+  position: fixed;
+
+  inset: 0;
+
+  z-index: 100;
+
+  display: none;
+
+  align-items: center;
+
+  justify-content: center;
+
+  padding: 20px;
+}
+
+
+.enquiry-modal.is-open {
+  display: flex;
+}
+
+
+.enquiry-modal__backdrop {
+  position: absolute;
+
+  inset: 0;
+
+  background: rgba(7,27,44,0.72);
+}
+
+
+.enquiry-modal__panel {
+  position: relative;
+
+  z-index: 2;
+
+  width: 100%;
+
+  max-width: 450px;
+
+  background: #FFFFFF;
+
+  padding: 35px;
+
+  border-radius: 10px;
+
+  border-top: 4px solid #D6A945;
+
+  box-shadow:
+    0 25px 70px rgba(0,0,0,0.25);
+}
+
+
+.enquiry-modal__panel h3 {
+  color: #0B2A44;
+
+  font-family: "Playfair Display", Georgia, serif;
+
+  font-size: 1.5rem;
+
+  margin-bottom: 7px;
+}
+
+
+.enquiry-modal__panel > p {
+  color: #667380;
+
+  font-size: 0.9rem;
+}
+
+
+.enquiry-modal__panel label {
+  display: block;
+
+  color: #0B2A44;
+
+  font-size: 0.84rem;
+
+  font-weight: 600;
+
+  margin-bottom: 16px;
+}
+
+
+.enquiry-modal__panel input,
+.enquiry-modal__panel select {
+  display: block;
+
+  width: 100%;
+
+  margin-top: 6px;
+
+  padding: 12px 14px;
+
+  border: 1px solid #E7ECF1;
+
+  border-radius: 5px;
+
+  font-family: "Poppins", sans-serif;
+
+  font-size: 0.9rem;
+
+  background: #FFFFFF;
+}
+
+
+.enquiry-modal__panel input:focus,
+.enquiry-modal__panel select:focus {
+  outline: 2px solid #38BDF8;
+
+  outline-offset: 1px;
+}
+
+
+.enquiry-modal__panel .btn {
+  width: 100%;
+
+  margin-top: 5px;
+}
+
+
+.enquiry-modal__close {
+  position: absolute;
+
+  top: 10px;
+
+  right: 15px;
+
+  background: none;
+
+  border: none;
+
+  font-size: 1.7rem;
+
+  color: #667380;
+
+  cursor: pointer;
+}
+
+
+.enquiry-modal__note {
+  color: #0EA5E9 !important;
+
+  font-size: 0.85rem;
+
+  margin-top: 12px;
+}
+
+
+/* =========================================================
+   RESPONSIVE — TABLET
+   ========================================================= */
+
+@media (max-width: 1100px) {
+
+  .projects-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    gap: 28px;
+  }
+
+  .project-image {
+    height: 310px;
+  }
+
+}
+
+
+/* =========================================================
+   RESPONSIVE — MOBILE
+   ========================================================= */
+
+@media (max-width: 760px) {
+
+  .projects-page {
+    padding: 70px 0;
+  }
+
+  .projects-heading {
+    margin-bottom: 40px;
+  }
+
+  .projects-grid {
+    grid-template-columns: 1fr;
+
+    gap: 25px;
+  }
+
+  .project-image {
+    height: 300px;
+  }
+
+  .project-content {
+    padding: 25px;
+  }
+
+  .project-content h3 {
+    font-size: 1.45rem;
+  }
+
+  .project-description {
+    min-height: auto;
+  }
+
+  .projects-cta {
+    padding: 60px 0;
+  }
+
+  .projects-cta-content {
+    align-items: flex-start;
+
+    flex-direction: column;
+  }
+
+  .footer-simple {
+    flex-direction: column;
+  }
+
+  .footer-links {
+    gap: 15px;
+  }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 480px) {
+
+  .projects-grid {
+    gap: 20px;
+  }
+
+  .project-image {
+    height: 250px;
+  }
+
+  .project-content {
+    padding: 22px;
+  }
+
+  .project-content h3 {
+    font-size: 1.35rem;
+  }
+
+  .project-status {
+    top: 15px;
+
+    left: 15px;
+
+    padding: 8px 16px;
+  }
+
+  .project-number {
+    top: 15px;
+
+    right: 15px;
+
+    width: 38px;
+
+    height: 38px;
+  }
+
+  .project-description {
+    font-size: 0.88rem;
+
+    line-height: 1.6;
+  }
+
+}
+
+/* ================= PROJECTS PAGE BANNER ================= */
+
+.projects-banner {
+  position: relative;
+
+  /* Reduced banner height */
+  min-height: 260px;
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  overflow: hidden;
+}
+
+
+/* ================= DARK OVERLAY ================= */
+
+.projects-banner__overlay {
+  position: absolute;
+  inset: 0;
+
+  background: rgba(0, 0, 0, 0.55);
+
+  z-index: 1;
+}
+
+
+/* ================= BANNER CONTENT ================= */
+
+.projects-banner__content {
+  position: relative;
+  z-index: 2;
+
+  width: 100%;
+  max-width: 1100px;
+
+  /* Reduced spacing */
+  padding: 40px 30px;
+
+  text-align: center;
+
+  color: #ffffff;
+}
+
+
+/* ================= SMALL HEADING ================= */
+
+.projects-eyebrow {
+  margin: 0 0 8px;
+
+  font-size: 13px;
+  font-weight: 600;
+
+  letter-spacing: 3px;
+  text-transform: uppercase;
+
+  color: #d4af37;
+}
+
+
+/* ================= MAIN HEADING ================= */
+
+.projects-banner h1 {
+  margin: 0 0 12px;
+
+  font-size: clamp(38px, 5vw, 60px);
+
+  line-height: 1.05;
+
+  font-weight: 700;
+
+  color: #ffffff;
+}
+
+
+/* ================= HIGHLIGHTED WORD ================= */
+
+.projects-banner h1 em {
+  font-style: normal;
+
+  color: #d4af37;
+}
+
+
+/* ================= DESCRIPTION ================= */
+
+.projects-banner__content > p:not(.projects-eyebrow) {
+  max-width: 650px;
+
+  margin: 0 auto 16px;
+
+  font-size: 15px;
+
+  line-height: 1.5;
+
+  color: rgba(255, 255, 255, 0.9);
+}
+
+
+/* ================= BREADCRUMB ================= */
+
+.breadcrumb {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 10px;
+
+  font-size: 13px;
+
+  font-weight: 500;
+
+  color: rgba(255, 255, 255, 0.8);
+}
+
+
+/* ================= BREADCRUMB LINKS ================= */
+
+.breadcrumb a {
+  color: #ffffff;
+
+  text-decoration: none;
+
+  transition: color 0.3s ease;
+}
+
+
+/* ================= BREADCRUMB HOVER ================= */
+
+.breadcrumb a:hover {
+  color: #d4af37;
+}
+
+
+/* ================= BREADCRUMB ARROW ================= */
+
+.breadcrumb span:nth-child(2) {
+  color: #d4af37;
+
+  font-size: 18px;
+}
+
+
+/* ================= CURRENT PAGE ================= */
+
+.breadcrumb span:last-child {
+  color: rgba(255, 255, 255, 0.75);
+}
+
+
+/* ================= TABLET ================= */
+
+@media (max-width: 768px) {
+
+  .projects-banner {
+    min-height: 240px;
+
+    background-position: center;
+  }
+
+  .projects-banner__content {
+    padding: 35px 24px;
+  }
+
+  .projects-eyebrow {
+    font-size: 11px;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 8px;
+  }
+
+  .projects-banner h1 {
+    font-size: 44px;
+
+    margin-bottom: 10px;
+  }
+
+  .projects-banner__content > p:not(.projects-eyebrow) {
+    font-size: 14px;
+
+    line-height: 1.5;
+
+    margin-bottom: 14px;
+  }
+
+  .breadcrumb {
+    font-size: 12px;
+
+    gap: 8px;
+  }
+
+}
+
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 480px) {
+
+  .projects-banner {
+    min-height: 220px;
+
+    background-position: center;
+  }
+
+  .projects-banner__content {
+    padding: 30px 20px;
+  }
+
+  .projects-eyebrow {
+    font-size: 10px;
+
+    letter-spacing: 1.8px;
+  }
+
+  .projects-banner h1 {
+    font-size: 36px;
+
+    line-height: 1.1;
+
+    margin-bottom: 10px;
+  }
+
+  .projects-banner__content > p:not(.projects-eyebrow) {
+    font-size: 13px;
+
+    line-height: 1.45;
+
+    margin-bottom: 12px;
+  }
+
+  .breadcrumb {
+    font-size: 12px;
+
+    gap: 7px;
+  }
+
+  .breadcrumb span:nth-child(2) {
+    font-size: 16px;
+  }
+
+}

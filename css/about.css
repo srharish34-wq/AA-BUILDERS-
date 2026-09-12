@@ -1,0 +1,358 @@
+/* ==========================================================================
+   AA Builders & Interiors — ABOUT PAGE stylesheet
+   ------------------------------------------------------------------------
+   Page-specific styles only. Relies on css/Style.css for:
+   variables (--navy, --blue, --gold, --ink, --slate, --line, --paper...),
+   fonts, .section-inner, .eyebrow, .section-head, .btn, header, footer,
+   founders, enquiry modal.
+   ========================================================================== */
+
+/* ---- Page hero ----------------------------------------------------------- */
+.about-hero {
+  position: relative;
+  overflow: hidden;
+  background: var(--navy-deep);
+  min-height: 460px;
+  display: flex;
+  align-items: center;
+}
+.about-hero__media { position: absolute; inset: 0; }
+.about-hero__media img { width: 100%; height: 100%; object-fit: cover; object-position: center 40%; }
+.about-hero__media::after {
+  content: "";
+  position: absolute; inset: 0;
+  background: linear-gradient(100deg, rgba(7,27,44,0.94) 0%, rgba(11,42,68,0.86) 42%, rgba(11,42,68,0.5) 75%, rgba(11,42,68,0.28) 100%);
+}
+.about-hero__content {
+  position: relative; z-index: 2;
+  max-width: var(--container); margin: 0 auto; width: 100%;
+  padding: 64px 28px;
+}
+.about-hero__content .eyebrow { color: var(--gold); }
+.about-hero__content .eyebrow::before { background: var(--gold); }
+.about-hero h1 {
+  color: var(--white);
+  font-size: clamp(2rem, 4vw, 3.1rem);
+  max-width: 18ch;
+  margin-bottom: 20px;
+}
+.about-hero__lede { color: #CBD8E3; font-size: 1.05rem; max-width: 54ch; margin-bottom: 34px; }
+.about-hero__actions { display: flex; gap: 16px; flex-wrap: wrap; }
+
+/* ---- Breadcrumb (optional, subtle) ---------------------------------------- */
+.about-hero__crumb {
+  font-family: var(--font-body);
+  font-size: 0.84rem;
+  color: #9FCBEA;
+  margin-bottom: 18px;
+}
+.about-hero__crumb a { color: #9FCBEA; }
+.about-hero__crumb a:hover { color: var(--gold); }
+.about-hero__crumb span { color: var(--gold); }
+
+/* ---- Our Story ------------------------------------------------------------ */
+.about-story { padding: 100px 0; background: var(--white); }
+.about-story__grid { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; }
+.about-story__media { position: relative; }
+.about-story__media img { border-radius: 4px; }
+.about-story__badge {
+  position: absolute; bottom: -24px; left: -24px;
+  background: var(--navy);
+  color: var(--white);
+  padding: 20px 26px;
+  border-radius: 4px;
+  border-left: 4px solid var(--gold);
+}
+.about-story__badge strong { display: block; font-family: var(--font-head); font-size: 1.9rem; color: var(--gold); }
+.about-story__badge span { font-size: 0.82rem; color: #C9D6E1; }
+
+.about-story__content p { max-width: 52ch; }
+.about-story__list { display: grid; gap: 14px; margin: 28px 0 6px; }
+.about-story__list li {
+  display: flex; align-items: flex-start; gap: 12px;
+  font-family: var(--font-body); font-size: 0.98rem; color: var(--ink);
+}
+.about-story__list li svg { flex-shrink: 0; width: 20px; height: 20px; color: var(--gold-deep); margin-top: 2px; }
+
+/* ---- Mission & Vision -------------------------------------------------------- */
+.mission-vision { padding: 90px 0; background: var(--paper); }
+.mission-vision__grid { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; }
+.mission-card, .vision-card {
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-top: 3px solid var(--gold);
+  border-radius: 6px;
+  padding: 40px 36px;
+}
+.vision-card { border-top-color: var(--blue); }
+.mission-vision__icon {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 52px; height: 52px; border-radius: 50%;
+  background: var(--gold-pale); color: var(--gold-deep);
+  margin-bottom: 20px;
+}
+.mission-vision__icon svg { width: 26px; height: 26px; }
+.vision-card .mission-vision__icon { background: var(--blue-pale); color: var(--blue-deep); }
+.mission-card h3, .vision-card h3 { font-size: 1.3rem; margin-bottom: 12px; }
+.mission-card p, .vision-card p { color: var(--slate); margin: 0; max-width: 46ch; }
+
+/* ---- Core Values ------------------------------------------------------------- */
+.core-values { padding: 100px 0; background: var(--navy); }
+.core-values .section-head h2 { color: var(--white); }
+.core-values .section-head p { color: #C9D6E1; }
+.core-values__grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 20px; }
+.core-value-card {
+  padding: 28px 22px;
+  background: var(--navy-soft);
+  border-radius: 6px;
+  border-top: 3px solid var(--gold);
+}
+.core-value-card:nth-child(2), .core-value-card:nth-child(4) { border-top-color: var(--blue); }
+.core-value-card__num {
+  display: block;
+  font-family: var(--font-head);
+  font-weight: 700;
+  font-size: 0.92rem;
+  color: var(--gold);
+  margin-bottom: 14px;
+}
+.core-value-card:nth-child(2) .core-value-card__num,
+.core-value-card:nth-child(4) .core-value-card__num { color: var(--blue); }
+.core-value-card h3 { color: var(--white); font-size: 1.02rem; margin-bottom: 8px; }
+.core-value-card p { color: #B9C9D6; font-size: 0.9rem; margin: 0; }
+
+/* ---- Our Journey (timeline) -------------------------------------------------- */
+.journey { padding: 100px 0; background: var(--paper); }
+.journey__timeline {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 20px;
+  position: relative;
+}
+.journey__timeline::before {
+  content: ""; position: absolute; top: 26px; left: 0; right: 0; height: 1px; background: var(--line);
+}
+.journey__item { position: relative; padding-top: 66px; }
+.journey__item__num {
+  position: absolute; top: 0; left: 0;
+  width: 52px; height: 52px; border-radius: 50%;
+  background: var(--white);
+  border: 2px solid var(--gold);
+  color: var(--navy);
+  font-family: var(--font-head); font-weight: 700; font-size: 1.15rem;
+  display: flex; align-items: center; justify-content: center;
+  z-index: 1;
+}
+.journey__item h3 { font-size: 1.02rem; margin-bottom: 6px; }
+.journey__item p { font-size: 0.9rem; margin: 0; }
+
+/* ---- Founders (page variant, reuses .founders from Style.css) ------------- */
+.about-founder-section { padding: 100px 0; background: var(--white); }
+.about-founder-section .founders__grid { margin-top: 8px; }
+
+/* ---- Why Choose Us (dark section, page variant) ---------------------------- */
+.about-why { padding: 100px 0; background: var(--navy); }
+.about-why .section-head h2 { color: var(--white); }
+.about-why .section-head p { color: #C9D6E1; }
+.about-why__grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 20px; }
+.about-why-card {
+  padding: 28px 22px;
+  background: var(--navy-soft);
+  border-radius: 6px;
+  border-top: 3px solid var(--gold);
+}
+.about-why-card:nth-child(2), .about-why-card:nth-child(4) { border-top-color: var(--blue); }
+.about-why-card__num {
+  display: block;
+  font-family: var(--font-head);
+  font-weight: 700;
+  font-size: 0.9rem;
+  color: var(--gold);
+  margin-bottom: 12px;
+}
+.about-why-card:nth-child(2) .about-why-card__num,
+.about-why-card:nth-child(4) .about-why-card__num { color: var(--blue); }
+.about-why-card h3 { color: var(--white); font-size: 1.02rem; margin-bottom: 8px; }
+.about-why-card p { color: #B9C9D6; font-size: 0.9rem; margin: 0; }
+
+/* ---- CTA -------------------------------------------------------------------- */
+.about-cta {
+  position: relative;
+  background: var(--navy);
+  padding: 84px 0;
+  overflow: hidden;
+}
+.about-cta::before {
+  content: "";
+  position: absolute; inset: 0;
+  background: radial-gradient(circle at 85% 30%, rgba(214,169,69,0.14), transparent 55%);
+}
+.about-cta__inner {
+  max-width: var(--container); margin: 0 auto; padding: 0 28px;
+  position: relative; z-index: 2;
+  display: flex; align-items: center; justify-content: space-between; gap: 32px; flex-wrap: wrap;
+}
+.about-cta__inner h2 { color: var(--white); font-size: clamp(1.6rem, 3vw, 2.2rem); max-width: 22ch; margin: 0 0 8px; }
+.about-cta__inner p { color: #C9D6E1; max-width: 46ch; margin: 0; }
+.about-cta__actions { display: flex; gap: 14px; flex-wrap: wrap; }
+
+/* ---- Scroll-reveal state (JS toggles .is-visible) --------------------------- */
+.about-page [data-reveal] {
+  opacity: 0;
+  transform: translateY(18px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+.about-page [data-reveal].is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+@media (prefers-reduced-motion: reduce) {
+  .about-page [data-reveal] { opacity: 1; transform: none; transition: none; }
+}
+
+/* ---- Responsive --------------------------------------------------------------- */
+@media (max-width: 1080px) {
+  .core-values__grid, .about-why__grid { grid-template-columns: repeat(3, 1fr); }
+  .journey__timeline { grid-template-columns: repeat(3, 1fr); row-gap: 40px; }
+  .journey__timeline::before { display: none; }
+}
+
+@media (max-width: 980px) {
+  .about-story__grid { grid-template-columns: 1fr; }
+  .about-story__badge { position: static; margin-top: -40px; margin-left: 20px; display: inline-block; }
+  .mission-vision__grid { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 760px) {
+  .about-hero { min-height: 420px; }
+  .core-values__grid, .about-why__grid { grid-template-columns: repeat(2, 1fr); }
+  .journey__timeline { grid-template-columns: 1fr; }
+  .about-cta__inner { flex-direction: column; align-items: flex-start; }
+}
+
+@media (max-width: 480px) {
+  .core-values__grid, .about-why__grid { grid-template-columns: 1fr; }
+}
+/* OUR JOURNEY — centered vertical timeline */
+.journey--timeline .section-inner {
+  max-width: 760px;
+  margin: 0 auto;
+  padding-left: 24px;
+  padding-right: 24px;
+}
+
+.journey--timeline .section-head {
+  text-align: center;
+  max-width: 100%;
+  margin: 0 auto 56px;
+}
+
+.journey--timeline .section-head .eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.journey--timeline .section-head .eyebrow::before {
+  content: "";
+  width: 24px;
+  height: 1px;
+  background: #d4a94a;
+  display: inline-block;
+}
+
+.journey--timeline .journey__timeline {
+  display: flex !important;
+  flex-direction: column !important;
+  flex-wrap: nowrap !important;
+  grid-template-columns: none !important;
+  position: relative;
+  padding-left: 40px;
+  gap: 0;
+}
+
+.journey--timeline .journey__timeline::before {
+  content: "";
+  position: absolute;
+  top: 10px;
+  bottom: 10px;
+  left: 7px;
+  width: 1px;
+  background: rgba(90, 30, 30, 0.2);
+}
+
+.journey--timeline .journey__row {
+  position: relative;
+  width: 100%;
+  padding: 4px 0 48px 24px;
+  transition: transform 0.25s ease;
+}
+
+.journey--timeline .journey__row:last-child {
+  padding-bottom: 4px;
+}
+
+.journey--timeline .journey__row:hover {
+  transform: translateX(4px);
+}
+
+.journey--timeline .journey__dot {
+  position: absolute;
+  top: 4px;
+  left: -40px;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: #5a1e1e;
+  border: 3px solid #d4a94a;
+  box-shadow: 0 0 0 4px #faf3e8, 0 0 0 5px rgba(90, 30, 30, 0.15);
+  flex-shrink: 0;
+  z-index: 1;
+}
+
+.journey--timeline .journey__content {
+  width: 100%;
+}
+
+.journey--timeline .journey__stage {
+  display: block;
+  font-family: "Playfair Display", serif;
+  font-weight: 700;
+  font-size: 1.05rem;
+  color: #5a1e1e;
+  margin-bottom: 6px;
+  letter-spacing: 0.01em;
+}
+
+.journey--timeline .journey__content h3 {
+  font-family: "Playfair Display", serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #2a1414;
+  margin: 0 0 10px;
+  line-height: 1.25;
+}
+
+.journey--timeline .journey__content p {
+  color: #5b5148;
+  line-height: 1.65;
+  margin: 0;
+  max-width: 48ch;
+}
+
+@media (max-width: 640px) {
+  .journey--timeline .journey__timeline {
+    padding-left: 28px;
+  }
+  .journey--timeline .journey__row {
+    padding-left: 12px;
+  }
+  .journey--timeline .journey__dot {
+    left: -28px;
+    width: 12px;
+    height: 12px;
+  }
+  .journey--timeline .journey__content h3 {
+    font-size: 1.25rem;
+  }
+}

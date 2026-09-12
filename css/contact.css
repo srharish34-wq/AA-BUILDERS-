@@ -1,0 +1,180 @@
+/* ==========================================================================
+   AA Builders & Interiors — CONTACT PAGE stylesheet
+   Loads AFTER css/Style.css — reuses the same CSS variables, fonts,
+   .btn, .eyebrow, .section-inner, .find-us and .site-header/.site-footer
+   rules already defined there. Only page-specific sections live here.
+   ========================================================================== */
+
+/* ---- Contact hero -------------------------------------------------------- */
+.contact-hero {
+  position: relative;
+  background: var(--navy-deep);
+  padding-bottom: 120px; /* leaves room for the overlapping card grid */
+  overflow: visible;
+}
+.contact-hero__media { position: absolute; inset: 0; height: 420px; overflow: hidden; }
+.contact-hero__media img { width: 100%; height: 100%; object-fit: cover; object-position: center 30%; }
+.contact-hero__media::after {
+  content: "";
+  position: absolute; inset: 0;
+  background: linear-gradient(180deg, rgba(7,27,44,0.88) 0%, rgba(7,27,44,0.93) 70%, var(--navy-deep) 100%);
+}
+
+.contact-hero__content {
+  position: relative;
+  z-index: 2;
+  padding: 90px 28px 40px;
+  max-width: 760px;
+}
+.contact-hero__content h1 { color: var(--white); font-size: clamp(2rem, 4vw, 3rem); margin-bottom: 18px; }
+.contact-hero__content h1 em { font-style: italic; color: var(--gold); }
+.contact-hero__content p { color: #CBD8E3; font-size: 1.05rem; margin: 0; }
+
+/* ---- Quick contact cards (overlap the hero bottom edge) ------------------- */
+.quick-contact { position: relative; z-index: 3; padding: 0 28px; }
+.quick-contact__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 22px;
+}
+.quick-contact__card {
+  background: var(--white);
+  border-radius: 8px;
+  padding: 28px 24px;
+  box-shadow: 0 20px 40px rgba(7,27,44,0.18);
+}
+.quick-contact__icon {
+  width: 44px; height: 44px;
+  border-radius: 50%;
+  background: var(--blue-pale);
+  color: var(--blue-deep);
+  display: flex; align-items: center; justify-content: center;
+  margin-bottom: 18px;
+}
+.quick-contact__icon svg { width: 20px; height: 20px; }
+.quick-contact__card h3 { font-size: 1.08rem; margin-bottom: 6px; }
+.quick-contact__label { font-size: 0.88rem; color: var(--slate); margin-bottom: 10px; }
+.quick-contact__value {
+  display: block;
+  font-family: var(--font-body);
+  font-weight: 700;
+  color: var(--blue-deep);
+  font-size: 1.02rem;
+}
+.quick-contact__value--wrap { font-size: 0.92rem; word-break: break-word; }
+.quick-contact__link {
+  display: inline-block;
+  margin-top: 6px;
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 0.86rem;
+  color: var(--gold-deep);
+}
+
+/* ---- Get in touch ---------------------------------------------------------- */
+.get-in-touch { padding: 100px 0; background: var(--white); }
+.get-in-touch__grid { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: start; }
+.get-in-touch__info p { max-width: 48ch; }
+
+.get-in-touch__list { display: grid; margin-top: 28px; border-top: 1px solid var(--line); }
+.get-in-touch__list li {
+  display: flex; align-items: center; gap: 16px;
+  padding: 18px 0;
+  border-bottom: 1px solid var(--line);
+}
+.get-in-touch__icon {
+  flex-shrink: 0;
+  width: 40px; height: 40px;
+  border-radius: 50%;
+  background: var(--paper);
+  color: var(--blue-deep);
+  display: flex; align-items: center; justify-content: center;
+}
+.get-in-touch__icon svg { width: 18px; height: 18px; }
+.get-in-touch__list strong { display: block; font-family: var(--font-body); font-size: 0.94rem; color: var(--navy); margin-bottom: 2px; }
+.get-in-touch__list a,
+.get-in-touch__plain { font-size: 0.92rem; color: var(--slate); }
+.get-in-touch__list a:hover { color: var(--blue-deep); }
+
+.enquiry-card {
+  background: var(--gold-pale);
+  border-radius: 10px;
+  padding: 40px;
+}
+.enquiry-card h3 { font-size: 1.3rem; margin-bottom: 24px; }
+.enquiry-card label { display: block; font-size: 0.86rem; font-weight: 600; color: var(--navy); margin-bottom: 18px; }
+.enquiry-card .req { color: #C0392B; }
+.enquiry-card input {
+  display: block; width: 100%; margin-top: 6px; padding: 12px 14px;
+  border: 1px solid var(--line); border-radius: 4px;
+  font-family: var(--font-body); font-size: 0.95rem; background: var(--white); color: var(--ink);
+}
+.enquiry-card input:focus { outline: 2px solid var(--blue); outline-offset: 1px; }
+.enquiry-card .btn { width: 100%; margin-top: 4px; }
+.enquiry-card__note { margin-top: 14px; font-size: 0.88rem; color: var(--blue-deep); min-height: 1.2em; }
+
+/* ---- Find us page tweaks (address block + hours + pill button) ------------ */
+.find-us__meta li span strong { display: block; margin-bottom: 2px; color: var(--navy); }
+.btn--pill { border-radius: 999px; }
+
+/* ---- Simple FAQ (no card border, plus/minus icon) -------------------------- */
+.faq-simple { padding: 100px 0; background: var(--paper); }
+.faq-simple__list { max-width: 780px; margin: 0 auto; border-top: 1px solid var(--line); }
+.faq-simple__item { border-bottom: 1px solid var(--line); }
+.faq-simple__q {
+  width: 100%; text-align: left; background: none; border: none; cursor: pointer;
+  padding: 22px 4px; display: flex; align-items: center; justify-content: space-between; gap: 16px;
+  font-family: var(--font-body); font-weight: 600; font-size: 1rem; color: var(--navy);
+}
+.faq-simple__q .plus-icon { flex-shrink: 0; width: 20px; height: 20px; position: relative; }
+.faq-simple__q .plus-icon::before,
+.faq-simple__q .plus-icon::after {
+  content: ""; position: absolute; background: var(--gold-deep); top: 50%; left: 50%;
+  transition: transform 0.15s ease;
+}
+.faq-simple__q .plus-icon::before { width: 14px; height: 2px; transform: translate(-50%, -50%); }
+.faq-simple__q .plus-icon::after { width: 2px; height: 14px; transform: translate(-50%, -50%); }
+.faq-simple__item.is-open .plus-icon::after { transform: translate(-50%, -50%) rotate(90deg); }
+.faq-simple__a { max-height: 0; overflow: hidden; transition: max-height 0.2s ease; }
+.faq-simple__item.is-open .faq-simple__a { max-height: 200px; }
+.faq-simple__a p { padding: 0 4px 22px; margin: 0; font-size: 0.95rem; }
+
+/* ---- Floating call / WhatsApp buttons -------------------------------------- */
+.floating-actions {
+  position: fixed;
+  right: 22px;
+  bottom: 22px;
+  z-index: 60;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.floating-actions__btn {
+  width: 52px; height: 52px;
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  color: var(--white);
+  box-shadow: 0 10px 24px rgba(7,27,44,0.28);
+  transition: transform 0.15s ease;
+}
+.floating-actions__btn:hover { transform: translateY(-2px); }
+.floating-actions__btn svg { width: 24px; height: 24px; }
+.floating-actions__btn--whatsapp { background: #25D366; }
+.floating-actions__btn--call { background: var(--gold); color: var(--navy-deep); }
+
+/* ---- Responsive ------------------------------------------------------------- */
+@media (max-width: 1080px) {
+  .quick-contact__grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 980px) {
+  .get-in-touch__grid { grid-template-columns: 1fr; }
+  .enquiry-card { order: -1; }
+}
+
+@media (max-width: 760px) {
+  .contact-hero__media { height: 520px; }
+  .contact-hero { padding-bottom: 260px; }
+  .quick-contact__grid { grid-template-columns: 1fr; }
+  .floating-actions { right: 16px; bottom: 16px; }
+}
