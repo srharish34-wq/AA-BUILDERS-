@@ -179,9 +179,14 @@ a { color: inherit; text-decoration: none; }
   font-size: 1rem;
 }
 .brand__text { display: flex; flex-direction: column; line-height: 1.15; }
-.brand__text strong { font-family: var(--font-head); font-size: 1.28rem; color: var(--white); font-weight: 700; }
-.brand__text em { font-family: var(--font-head); font-style: italic; font-size: 0.86rem; color: var(--gold); letter-spacing: 0.2px; }
-
+.brand__text strong,
+.brand__text em {
+  font-family: var(--font-head);
+  font-size: 1.28rem;
+  font-weight: 700;
+  color: var(--white);
+  font-style: normal;
+}
 .main-nav { display: flex; align-items: center; gap: 32px; }
 .main-nav a {
   font-family: var(--font-body);
